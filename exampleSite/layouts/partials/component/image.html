@@ -1,0 +1,7 @@
+{{ $image := .image }}
+{{ $url := .url }}
+{{ with .Params.Banner }}   
+  {{ partial "component/banner-image.html"   . }}
+{{ else }}
+  {{ partial "component/circular-image.html" (dict "content" . "image" $image "url" $url) }}
+{{ end }}
