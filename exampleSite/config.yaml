@@ -6,7 +6,6 @@
 buildFuture: true         # Include content with publishdate in the future
 enableRobotsTXT: true     # Generate a customized robots.txt
 languageCode: "en-gb"     # Used as part of the XML generation
-theme: "cv"     # Name of the theme. Don't change this from hugo-creator.
 title: "Cloud With Chris" # Title of the website
 
 #####
@@ -19,6 +18,8 @@ markup:
       unsafe: true
 
 module:
+  imports:
+    path: "github.com/chrisreddington/cv"
   mounts:
     - source: "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
       target: "assets/js/bootstrap.bundle.min.js"
@@ -78,143 +79,8 @@ params:
       keywords:
         - cloud
         - azure
-        - gcp
-        - aws
-        - chris reddington
-        - cloud tutorials
-        - cloud design patterns
-        - devops how to
-        - how to deploy using github actions
-        - how to design for the cloud
-        - cloud architecture
-        - azure architecture center
-        - google cloud platform
-        - amazon web services
-        - christian reddington
-        - github
-        - github actions
-        - github discussions
-        - microsoft
-        - github issues
-        - amazon
-        - google
-        - SLO
-        - SLA
-        - RTO
-        - RPO
-        - non-functional requirements
-        - functional requirements
-        - requirements
-        - cost management
-        - cloud governance
-        - cost control
-        - resource governance
-        - cloud recommended practices
-        - cloud best practices
-        - learn cloud
-        - learn Azure
-        - Microsoft Azure
-        - how to get started with azure
-        - how to keep up to date with azure
-        - technology podcast
-        - technology vlog
-        - azure vlog
-        - azure podcast
-        - cloud podcast
-        - cloud vlog
-        - cloud content
-        - azure content
-        - github content
-        - github podcast
-        - github vlog
-        - azure design patterns
-        - kubernetes
-        - azure kubernetes service
-        - azure app service
-        - platform as a service
-        - infrastructure as a service
-        - software as a service
-        - cloud gaming
-        - gaming
-        - game server
-        - application development
-        - software development
-        - devops
-        - liveops
-        - Continuous Integration
-        - Continuous Deployment
-        - azure updates
-        - azure blog
-        - cloud blog
-        - github blog
-        - devops blog
-        - meetup speaker
-        - technology speaker
-        - keynote speaker
-        - technology keynote
-        - conference speaker
-        - technology conference speaker
-        - cloud gaming technology
-        - how cloud is influencing gaming
-        - cloud drops
-        - architecting for the cloud one pattern at a time
-        - tales from the real world
-        - cloud gaming notes
-        - tech roundup
-        - static websites
-        - hugo
-        - hugo on azure
-        - static content
-        - azure static web apps
-        - logic apps
-        - iPaas
-        - serverless
-        - Azure Functions
-        - key vault
-        - azure key vault
-        - CosmosDB
-        - Git
-        - version control
-        - .net
-        - dotnet
-        - terraform
-        - arm templates
-        - bicep
-        - cloud monitoring
-        - azure monitor
-        - azure governance
-        - compute resource consolidation
-        - queueing
-        - messaging
-        - publish subscriber patterns
-        - priority queue patterns
-        - pipes and filters pattern
-        - geode pattern
-        - health endpoint monitoring pattern
-        - gatekeeper pattern
-        - valet key pattern
-        - JAMStack
-        - static content hosting pattern
-        - github codespaces
-        - anti-corruption layer pattern
-        - gateway aggregation pattern
-        - gateway routing pattern
-        - event sourcing pattern
-        - cqrs pattern
-        - command query responsibility segregation pattern
-        - throttling pattern
-        - retry pattern
-        - circuit breaker pattern
-        - backends for frontends pattern
-        - sharding pattern
-        - index table pattern
-        - deployment stamps pattern
-        - cloud security
-        - devsecops
       language_name: "English"
-      logo: "/img/Cloud.png" # Relative path to the site's logo
-      media_prefix: "https://podcasts.cloudwithchris.com/" # Media_Prefix is used when referencing podcast audio files. The media files in individual episodes will be concatenated after the media_prefix above.
-      ogimage: "/images/chris.jpg" # Used within RSS feeds.
+      logo: "images/chris.jpg" # Relative path to the site's logo
     social:
       discord: "9FJctHP9Zv"
       facebook: "CloudWithChris"
@@ -226,12 +92,6 @@ params:
       youtube: "CloudWithChris"
   # Parameters relating to site features and functionality
   features:
-    # Settings relating to audio players embedded 
-    # within the site.
-    audio_player:
-      use: "default"  # The options are default or podscribe
-      podscribe:
-        someconfig: "tbc"
     # Settings related to analytics
     analytics:
       googleAnalytics: "UA-185951371-1"       # Google Analytics ID

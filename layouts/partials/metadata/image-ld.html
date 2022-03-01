@@ -13,9 +13,9 @@
     {{- if $image -}}
       {{-  $image.Permalink -}}
     {{- else -}}
-      {{- (resources.GetMatch $content.Site.Params.content.site.ogimage).Permalink -}}
+      {{- (resources.GetMatch $content.Site.Params.content.site.logo).Permalink -}}
     {{- end -}}
   {{- else -}}
-    {{- (resources.GetMatch $content.Site.Params.content.site.ogimage).Permalink -}}
+    {{- (resources.GetMatch $content.Site.Params.content.site.logo).Permalink -}}
   {{- end -}}
 {{- end -}}
