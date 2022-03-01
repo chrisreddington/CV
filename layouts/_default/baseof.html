@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+  {{- partial "site-metadata.html" . -}}
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col">
+          {{ partial "component/image.html" (dict "content" . "url" "#" "image" .Site.Params.content.site.ogimage) }}
+          <p>{{ .Site.Title }}</p>
+        </div>
+      </div>
+      {{- partialCached "header/all.html" . -}}
+      <main class="d-flex flex-column flex-fill">
+      {{- block "top" . }}{{- end }}
+        <div class="bg-main flex-fill">
         {{- block "main" . }}{{- end }}
         </div>
-        {{- partial "footer.html" . -}}
-    </body>
+      {{- block "bottom" . }}{{- end }}
+      </main>
+      {{- partialCached  "footer/all.html" . -}}
+    </div>
+  </body>
 </html>

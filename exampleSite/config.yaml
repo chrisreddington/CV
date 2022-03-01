@@ -8,7 +8,6 @@ enableRobotsTXT: true     # Generate a customized robots.txt
 languageCode: "en-gb"     # Used as part of the XML generation
 theme: "cv"     # Name of the theme. Don't change this from hugo-creator.
 title: "Cloud With Chris" # Title of the website
-themesdir: "../../"
 
 #####
 # This is required to render the raw HTML on the
