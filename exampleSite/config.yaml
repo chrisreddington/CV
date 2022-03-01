@@ -6,7 +6,7 @@
 buildFuture: true         # Include content with publishdate in the future
 enableRobotsTXT: true     # Generate a customized robots.txt
 languageCode: "en-gb"     # Used as part of the XML generation
-title: "Cloud With Chris" # Title of the website
+title: "Chris Reddington" # Title of the website
 
 #####
 # This is required to render the raw HTML on the
@@ -21,28 +21,24 @@ module:
   imports:
     path: "github.com/chrisreddington/cv"
   mounts:
-    - source: "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-      target: "assets/js/bootstrap.bundle.min.js"
+    - source: "node_modules/bootstrap/js/dist"
+      target: "assets/js"
+    - source: "node_modules/@popperjs/core/dist/umd"
+      target: "assets/js"
+    - source: "node_modules/jquery/dist"
+      target: "assets/js"
+    - source: "node_modules/fuse.js/dist"
+      target: "assets/js"
     - source: "node_modules/bootstrap/scss"
       target: "assets/sass/bootstrap"
     - source: "./node_modules/@fortawesome/fontawesome-free/scss"
       target: "assets/sass/fontawesome"
     - source: "./node_modules/@fortawesome/fontawesome-free/webfonts"
       target: "static/webfonts"
-    - source: content
-      target: content
     - source: static
       target: static
-    - source: layouts
-      target: layouts
-    - source: data
-      target: data
     - source: assets
       target: assets
-    - source: i18n
-      target: i18n
-    - source: archetypes
-      target: archetypes
 
 # This enables the search functionality
 # to work, as it searches over the json file.

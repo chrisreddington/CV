@@ -32,7 +32,7 @@
     {{ $medium := ($image.Resize "1024x webp") }}
     {{ $large := ($image.Resize "1366x webp") }}
     <a href="{{ $url | relURL }}">
-      <img class="rounded-circle z-depth-2 person-image"
+      <img class="rounded-circle mx-auto d-block"
             loading="lazy"
             width="250"
             srcset="

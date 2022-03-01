@@ -1,0 +1,12 @@
+{
+  "scripts" : [
+    "js/dom/data.js",
+    "js/dom/event-handler.js",
+    "js/dom/manipulator.js",
+    "js/dom/selector-engine.js",
+    "js/base-component.js",
+    "js/carousel.js",
+    "js/collapse.js",
+    "js/dropdown.js"
+  ]
+}

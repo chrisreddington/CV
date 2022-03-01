@@ -2,22 +2,137 @@
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
   {{- partial "site-metadata.html" . -}}
   <body>
-    <div class="container">
-      <div class="row justify-content-center">
+      <div class="row bg-primary-color">
         <div class="col">
           {{ partial "component/image.html" (dict "content" . "url" "#" "image" .Site.Params.content.site.logo) }}
-          <p>{{ .Site.Title }}</p>
+          <h1 class="text-center mt-3 display-1">{{ .Site.Title }}</h1>
         </div>
       </div>
-      {{- partialCached "header/all.html" . -}}
-      <main class="d-flex flex-column flex-fill">
-      {{- block "top" . }}{{- end }}
-        <div class="bg-main flex-fill">
-        {{- block "main" . }}{{- end }}
+      <div class="bg-secondary-color py-5">
+        <div class="container">
+          {{- partialCached "header/all.html" . -}}
+        </div>
+      </div>
+      <main>
+        <div class="bg-tertiary-color py-4">
+          <div class="container">
+            {{- partialCached  "timeline" . -}}
+          </div>
+        </div>
+        <div class="bg-secondary-color">
+          <div class="container">
+            {{- block "main" . }}{{- end }}
+          </div>
+        </div>
+        <div class="bg-tertiary-color">
+          <div class="container">
+            <h2 class="display-3">Certifications</h2>
+            <div class="row text-center my-3">
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+            </div>
+            <div class="row text-center my-3">
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+            </div>
+            <div class="row text-center my-3">
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+            </div>
+            <div class="row text-center my-3">
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+              <div class="col">
+                <div class="certification">
+                  Certification here
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-secondary-color">
+          <div class="container">
+            <h2 class="display-3">Skills</h2>
+          </div>
+        </div>
+        <div class="bg-tertiary-color">
+          <div class="container">
+            {{- partialCached  "multi-carousel" . -}}
+          </div>
         </div>
       {{- block "bottom" . }}{{- end }}
       </main>
-      {{- partialCached  "footer/all.html" . -}}
-    </div>
+      <div class="bg-primary-color">
+        <div class="container">
+          {{- partialCached  "footer/all.html" . -}}
+        </div>
+      </div>
   </body>
 </html>

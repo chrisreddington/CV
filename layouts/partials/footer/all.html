@@ -1,1 +1,11 @@
 FOOTER!!!
+
+<!-- Bootstrap Dependencies -->
+{{ $scripts := .Site.Data.bootstrapdeps  }} 
+  {{ $.Scratch.Set "bootstrapDeps" slice }}
+  {{ range $scripts.scripts }}    
+    {{ $.Scratch.Add "bootstrapDeps" (resources.Get . ) }}
+  {{ end }}
+
+{{ $bootstrapJs := .Scratch.Get "bootstrapDeps" | resources.Concat "js/bootstrap.js" | resources.Minify | fingerprint }}
+<script src="{{ $bootstrapJs.Permalink }}"  cookie-consent="strictly-necessary" defer></script>

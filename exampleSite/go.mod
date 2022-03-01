@@ -1,7 +1,7 @@
 module github.com/chrisreddington/cv/exampleSite
 
 // Innocent line below!
-// replace github.com/chrisreddington/cv => /Users/chrisredddington/Documents/code/cv
+// replace github.com/chrisreddington/cv => /home/chris/dev/CV
 
 go 1.17
 
