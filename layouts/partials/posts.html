@@ -1,79 +1,32 @@
 <h1>Latest Posts</h1>
 
 <div class="row">
-  <div class="col-lg-4">
-      <div class="bs-box">
-          <div class="thumb">
-              <a href="#">
-                  <img src="https://i.picsum.photos/id/249/900/620.jpg" alt="Thumb">
-              </a>
-          </div>
-          <div class="info">
-              <div class="post-info">
-                  <ul>
-                      <li><i class="fas fa-calendar-alt"></i> 14 Jun, 2020</li>
-                  </ul>
-              </div>
-              <div class="content">
-                  <h4>
-                      <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                  </h4>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida luctus tortor in suscipit. Etiam non faucibus risus.
-                  </p>
-                  <a href="#" class="read-more-btn">Read More</a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="col-lg-4">
-      <div class="bs-box">
-          <div class="thumb">
-              <a href="#">
-                  <img src="https://i.picsum.photos/id/249/900/620.jpg" alt="Thumb">
-              </a>
-          </div>
-          <div class="info">
-              <div class="post-info">
-                  <ul>
-                      <li><i class="fas fa-calendar-alt"></i> 25 Jul, 2020</li>
-                  </ul>
-              </div>
-              <div class="content">
-                  <h4>
-                      <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                  </h4>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida luctus tortor in suscipit. Etiam non faucibus risus.
-                  </p>
-                  <a href="#" class="read-more-btn">Read More</a>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="col-lg-4">
-      <div class="bs-box">
-          <div class="thumb">
-              <a href="#">
-                  <img src="https://i.picsum.photos/id/249/900/620.jpg" alt="Thumb">
-              </a>
-          </div>
-          <div class="info">
-              <div class="post-info">
-                  <ul>
-                      <li><i class="fas fa-calendar-alt"></i> 18 Sep, 2020</li>
-                  </ul>
-              </div>
-              <div class="content">
-                  <h4>
-                      <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
-                  </h4>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida luctus tortor in suscipit. Etiam non faucibus risus.
-                  </p>
-                  <a href="#" class="read-more-btn">Read More</a>
-              </div>
-          </div>
-      </div>
-  </div>
+    {{ $rssJsonAPICall := getJSON "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fcloudwithchris.com%2Fblog%2Findex.xml" }}
+
+    {{ $items := ($rssJsonAPICall.items | first 3)}}
+
+    {{ range $items }}
+    <div class="col-lg-4">
+        <div class="bs-box">
+            <div class="thumb">
+                <a href="{{ .link }}">
+                    <img src="https://i.picsum.photos/id/249/900/620.jpg" alt="Thumb">
+                </a>
+            </div>
+            <div class="info">
+                <div class="content">
+                    <h4>
+                        <a href="{{ .link }}">{{ .title }}</a>
+                    </h4>
+                    <div class="post-info">
+                        <i class="fas fa-calendar-alt"></i> {{ .pubDate }}
+                    </div>
+                    <p>
+                        {{ .content }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
 </div>

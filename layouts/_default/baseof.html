@@ -2,30 +2,30 @@
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
   {{- partial "site-metadata.html" . -}}
   <body>
-      <div class="row bg-primary-color">
+      <div class="row bg-primary-color py-5">
         <div class="col">
           {{ partial "component/image.html" (dict "content" . "url" "#" "image" .Site.Params.content.site.logo) }}
           <h1 class="text-center mt-3 display-1">{{ .Site.Title }}</h1>
         </div>
       </div>
-      <div class="bg-secondary-color py-5">
-        <div class="container">
+      <div class="bg-secondary-color">
+        <div class="container py-5">
           {{- partialCached "header/all.html" . -}}
         </div>
       </div>
       <main>
-        <div class="bg-tertiary-color py-4">
-          <div class="container">
+        <div class="bg-tertiary-color">
+          <div class="container py-5">
             {{- partialCached  "timeline" . -}}
           </div>
         </div>
         <div class="bg-secondary-color">
-          <div class="container">
+          <div class="container py-5">
             {{- block "main" . }}{{- end }}
           </div>
         </div>
         <div class="bg-tertiary-color">
-          <div class="container">
+          <div class="container py-5">
             <h2 class="display-3">Certifications</h2>
 
             {{ $certs := .Site.Data.certifications  }} 
@@ -54,9 +54,25 @@
             {{ end }}
           </div>
         </div>
-        <div class="bg-secondary-color">
+        <div class="bg-secondary-color py-5">
           <div class="container">
             <h2 class="display-3">Skills</h2>
+            <h3>Beginner</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h3>Intermediate</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h3>Proficient</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <h3>Expert</h3>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
           </div>
         </div>
         <div class="bg-tertiary-color">
