@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "image": "images/azure-administrator-associate-600x600.png",
+      "name": "Azure Administrator Associate",
+      "url": "https://azure.microsoft.com/en-us/services/administrators/associate/"
+    },
+    {
+      "image": "images/azure-ai-engineer-600x600.png",
+      "name": "Azure AI Engineer",
+      "url": "https://azure.microsoft.com/en-us/services/ai-engineer/"
+    },
+    {
+      "name": "Azure Data Engineer Associate",
+      "image": "images/azure-data-engineer-associate-600x600.png",
+      "url": "https://azure.microsoft.com/en-us/services/data-engineer-associate/"
+    }
+  ]
+}

@@ -27,94 +27,31 @@
         <div class="bg-tertiary-color">
           <div class="container">
             <h2 class="display-3">Certifications</h2>
-            <div class="row text-center my-3">
-              <div class="col">
+
+            {{ $certs := .Site.Data.certifications  }} 
+            {{ range $index, $value := $certs.items }} 
+              {{ $adjustedIndex := add $index 1 }}
+
+              {{ if or (eq (mod $adjustedIndex 4) 0) (eq $index 0) }}
+                <div class="row">
+              {{ end }}
+
+
+              <div class="col justify-content-center text-center">
                 <div class="certification">
-                  Certification here
+                  <p>{{ partial "component/individual-image" (dict "content" . "tiny" 50 "small" 100 "medium" 150 "large" 200 "lazy" true) }}</p>
+                  <div class="row">
+                    <a href="{{ $value.url }}">
+                      {{ $value.name }}
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
+              </div> 
+              
+              {{ if eq (mod $adjustedIndex 4) 0 }}
                 </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-            </div>
-            <div class="row text-center my-3">
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-            </div>
-            <div class="row text-center my-3">
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-            </div>
-            <div class="row text-center my-3">
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-              <div class="col">
-                <div class="certification">
-                  Certification here
-                </div>
-              </div>
-            </div>
+              {{ end }}
+            {{ end }}
           </div>
         </div>
         <div class="bg-secondary-color">

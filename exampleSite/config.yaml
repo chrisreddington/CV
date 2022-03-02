@@ -8,15 +8,6 @@ enableRobotsTXT: true     # Generate a customized robots.txt
 languageCode: "en-gb"     # Used as part of the XML generation
 title: "Chris Reddington" # Title of the website
 
-#####
-# This is required to render the raw HTML on the
-# about us page.
-#####
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-
 module:
   imports:
     path: "github.com/chrisreddington/cv"
@@ -39,15 +30,6 @@ module:
       target: static
     - source: assets
       target: assets
-
-# This enables the search functionality
-# to work, as it searches over the json file.
-# In effect, this allows the layouts/index.json
-# file to be rendered.
-outputs:
-  home:
-    - "HTML"
-    - "RSS"
 
 # Custom Parameters that drive the site's
 # configuration. This includes custom
