@@ -3,17 +3,117 @@
     {
       "image": "images/azure-administrator-associate-600x600.png",
       "name": "Azure Administrator Associate",
-      "url": "https://azure.microsoft.com/en-us/services/administrators/associate/"
+      "url": ""
     },
     {
       "image": "images/azure-ai-engineer-600x600.png",
       "name": "Azure AI Engineer",
-      "url": "https://azure.microsoft.com/en-us/services/ai-engineer/"
+      "url": ""
     },
     {
       "name": "Azure Data Engineer Associate",
       "image": "images/azure-data-engineer-associate-600x600.png",
-      "url": "https://azure.microsoft.com/en-us/services/data-engineer-associate/"
+      "url": ""
+    },
+    {
+      "name": "Azure Data Scientist Associate",
+      "image": "images/azure-data-scientist-associate-600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Azure Developer Associate",
+      "image": "images/azure-developer-associate-600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Azure Security Engineer Associate",
+      "image": "images/azure-security-engineer-associate600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Azure Solutions Architect Expert",
+      "image": "images/azure-solutions-architect-expert-600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Azure DevOps Engineer Expert",
+      "image": "images/CERT-Expert-DevOps-Engineer-600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Power Platform Fundamentals",
+      "image": "images/CERT-Fundamentals-Power-Platform.png",
+      "url": ""
+    },
+    {
+      "name": "Certified Kubernetes Administrator",
+      "image": "images/cka_from_cncfsite__281_29.png",
+      "url": ""
+    },
+    {
+      "name": "Certified Kubernetes Application Developer",
+      "image": "images/ckad_from_cncfsite.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft Containers OpenHack Coach",
+      "image": "images/Containers_Coach.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft DevOps OpenHack Coach",
+      "image": "images/DevOps_Coach.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft Serverless OpenHack",
+      "image": "images/Serverless.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft Event Speaker Gold",
+      "image": "images/Event-Speaker-Gold.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft External User Group Gold",
+      "image": "images/External-User-Group-Gold.png",
+      "url": ""
+    },
+    {
+      "name": "Hashicorp Terraform Associate",
+      "image": "images/hashicorp-terraform-associate.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft Certified Trainer 2019 - 2020",
+      "image": "images/Microsoft-Certified-Trainer-2019-2020.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft Certified Trainer 2020 - 2021",
+      "image": "images/MCT-Microsoft_Certified_Trainer-2021.png",
+      "url": ""
+    },
+    {
+      "name": "Microsoft Certified Trainer 2021 - 2022",
+      "image": "images/MCT-Microsoft_Certified_Trainer-2122-600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Power Platform App Maker",
+      "image": "images/power-platform-app-maker-600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Power Platform Developer",
+      "image": "images/power-platform-developer-600x600.png",
+      "url": ""
+    },
+    {
+      "name": "Specialty in Azure IoT Developer",
+      "image": "images/specialty-azure-iot-developer-600x600.png",
+      "url": ""
     }
   ]
 }

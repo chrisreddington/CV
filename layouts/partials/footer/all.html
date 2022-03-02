@@ -1,4 +1,39 @@
-FOOTER!!!
+<footer class="section footer-classic context-dark bg-footer">
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col-md-4 col-xl-5">
+        <div class="pr-xl-4 flex-x justify-content-center text-center">
+          {{ partial "component/individual-image-direct" (dict "imagepath" .Site.Params.content.site.logo "title" .Site.Title "url" .Site.BaseURL "rounded" true "tiny" 50 "small" 100 "medium" 150 "large" 200 "lazy" true) }}
+          <h1 class="text-center mt-3 display-6">{{ .Site.Title }}</h1>
+          <p>{{ .Site.Params.Content.Site.Copyright.notice | markdownify }}</p>
+          <!-- Rights-->
+          <p class="rights">{{ .Site.Params.Content.Site.copyright.additional_information | markdownify }}</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h2>Contacts</h2>
+        <dl class="contact-list">
+          <dt>linkedin:</dt>
+          <dd>/in/chrisreddington</dd>
+        </dl>
+        <dl class="contact-list">
+          <dt>twitter:</dt>
+          <dd>@reddobowen</dd>
+        </dl>
+      </div>
+      <div class="col-md-4 col-xl-3">
+        <h2>Sections</h2>
+        <ul class="nav-list">
+          <li><a href="#">Career & Education</a></li>
+          <li><a href="#">Latest Posts</a></li>
+          <li><a href="#">Certifications</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Portfolios</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <!-- Bootstrap Dependencies -->
 {{ $scripts := .Site.Data.bootstrapdeps  }} 

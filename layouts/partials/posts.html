@@ -1,4 +1,4 @@
-<h1>Latest Posts</h1>
+<h2 class="display-3 my-4">Latest Posts</h2>
 
 <div class="row">
     {{ $rssJsonAPICall := getJSON "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fcloudwithchris.com%2Fblog%2Findex.xml" }}
@@ -8,18 +8,13 @@
     {{ range $items }}
     <div class="col-lg-4">
         <div class="bs-box">
-            <div class="thumb">
-                <a href="{{ .link }}">
-                    <img src="https://i.picsum.photos/id/249/900/620.jpg" alt="Thumb">
-                </a>
-            </div>
             <div class="info">
                 <div class="content">
-                    <h4>
+                    <h4 class="mb-3">
                         <a href="{{ .link }}">{{ .title }}</a>
                     </h4>
-                    <div class="post-info">
-                        <i class="fas fa-calendar-alt"></i> {{ .pubDate }}
+                    <div class="post-info mb-3">
+                        <i class="fa-solid fa-calendar ms-1 me-2"></i> {{ time.Format "Monday Jan 2, 2006" .pubDate }}
                     </div>
                     <p>
                         {{ .content }}

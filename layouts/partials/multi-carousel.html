@@ -1,43 +1,70 @@
-<h2 class="display-3">Portfolio</h2>
+<h2 class="display-3 my-4">Portfolio</h2>
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="row">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-5">
+          {{ partial "component/individual-image-direct" (dict "imagepath" "images/portfolio/cloudwithchris.png" "title" "Cloud With Chris" "url" "https://www.cloudwithchris.com" "tiny" 400 "small" 500 "medium" 600 "large" 800 "lazy" true) }}
+          </div>
+          <div class="col-md-7">
+            <h4>Cloud With Chris</h4>
+            <p>
+              Cloud with Chris is Chris' personal blog, podcast and content creation platform. Chris regularly invites guests to talk about their experiences with the cloud and hear about some of the lessons learned around their cloud journey
+            </p>
+            <p>
+              Content typically focuses on Azure, Azure DevOps, GitHub, and other cloud related topics.
+            </p>
+            <p>
+              Cloud With Chris is a JAMStack application deployed on Azure Static Web Apps behind Azure Front Door. It is built on top of the Hugo static site generator, and uses a custom theme (Chris' open sourced Hugo theme for content creators) to render the content. The theme has been designed fully responsive, with accessibility and SEO in mind.
+            </p>
+            <p>
+              <button class="btn bg-primary-color">Visit Website</button>
+              <button class="btn bg-primary-color">View on GitHub</button>
+            </p>
+          </div>
+        </div><!--.row-->
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-5">
+          {{ partial "component/individual-image-direct" (dict "imagepath" "images/portfolio/hugo-creator.png" "title" "Hugo Creator" "url" "https://github.com/CloudWithChris/hugo-creator" "tiny" 400 "small" 500 "medium" 600 "large" 800 "lazy" true) }}
+          </div>
+          <div class="col-md-7">
+            <h4>Hugo Creator</h4>
+            <p>
+              Born through Chris' desire to create content on Cloud With Chris, Hugo Creator is a Hugo theme designed for Content Creators.
+            </p>
+            <p>
+              Released as Open Source under the MIT license, it is a fully responsive theme designed to be used with Hugo. It has been built with accessibility and SEO in mind, and has Progressive Web App support for offline viewing.
+            </p>
+            <p>
+              <button class="btn bg-primary-color">Visit Website</button>
+              <button class="btn bg-primary-color">View on GitHub</button>
+            </p>
+          </div>
+        </div><!--.row-->
+      </div>
+    </div>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-      </div><!--.row-->
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-      </div><!--.row-->
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-        <div class="col-md-3"><a href="#" class="thumbnail"><img src="https://picsum.photos/250/250" alt="Image" style="max-width:100%;"></a></div>
-      </div><!--.row-->
-    </div>
+</div>
+
+<div class="row my-5">
+  <div class="d-flex justify-content-center col-2">
+    <button type="button" class="btn btn-cv" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <div class="d-flex justify-content-around col-8">
+    <button type="button" class="btn btn-cv" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true">1</button>
+    <button type="button" class="btn btn-cv" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">2</button>
+  </div>
+  <div class="d-flex justify-content-center col-2">
+    <button type="button" class="btn btn-cv" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
