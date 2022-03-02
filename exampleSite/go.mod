@@ -6,4 +6,4 @@ module github.com/chrisreddington/cv/exampleSite
 
 go 1.17
 
-require github.com/chrisreddington/cv v0.0.2 // indirect
+require github.com/chrisreddington/cv v0.0.3 // indirect
