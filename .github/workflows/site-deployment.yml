@@ -78,7 +78,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: website
-        path: public
+        path: exampleSite/public
   deploy_preview:  
     if: (github.event.pull_request.head.repo.full_name == github.repository && github.event.action != 'closed')
     runs-on: ubuntu-latest
