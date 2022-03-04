@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "title": "Cloud With Chris",
+      "image": "images/portfolio/cloudwithchris.png",
+      "description": "Cloud with Chris is Chris' personal blog, podcast and content creation platform. Chris regularly invites guests to talk about their experiences with the cloud and hear about some of the lessons learned around their cloud journey\n\nContent typically focuses on Azure, Azure DevOps, GitHub, and other cloud related topics.\n\nCloud With Chris is a JAMStack application deployed on Azure Static Web Apps behind Azure Front Door. It is built on top of the Hugo static site generator, and uses a custom theme (Chris' open sourced Hugo theme for content creators) to render the content. The theme has been designed fully responsive, with accessibility and SEO in mind.",
+      "urls": [
+        {
+          "link": "https://www.cloudwithchris.com",
+          "type": "Website",
+          "primary": true
+        },
+        {
+          "link": "https://github.com/CloudWithChris/cloudwithchris.com",
+          "type": "GitHub"
+        }
+      ]
+    },
+    {
+      "title": "Hugo Creator",
+      "image": "images/portfolio/hugo-creator.png",
+      "description": "Born through Chris' desire to create content on Cloud With Chris, Hugo Creator is a Hugo theme designed for Content Creators.\n\nReleased as Open Source under the MIT license, it is a fully responsive theme designed to be used with Hugo. It has been built with accessibility and SEO in mind, and has Progressive Web App support for offline viewing.",
+      "urls": [
+        {
+          "link": "https://github.com/CloudWithChris/cloudwithchris.com",
+          "type": "GitHub",
+          "primary": true
+        }
+      ]
+    }
+  ]
+}

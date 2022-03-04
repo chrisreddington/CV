@@ -1,0 +1,19 @@
+<h2 class="display-3">Certifications</h2>
+
+{{ $certs := .Site.Data.certifications  }} 
+<div class="row my-3">
+{{ range $index, $value := $certs.items }} 
+
+  <div class="col-md-3 col-sm-6 align-items-stretch justify-content-center text-center my-2">
+    <div class="certification">
+      <p>{{ partial "component/individual-image" (dict "content" . "tiny" 50 "small" 100 "medium" 150 "large" 200 "lazy" true) }}</p>
+      <div class="row">
+        <a href="{{ $value.url }}">
+          {{ $value.name }}
+        </a>
+      </div>
+    </div>
+  </div> 
+  
+{{ end }}
+</div>

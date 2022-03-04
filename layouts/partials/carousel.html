@@ -1,0 +1,50 @@
+{{ $content := .content }}
+{{ $sectionTitle := .sectionTitle | urlize }}
+<h2 class="display-3 my-4">{{ .sectionTitle | humanize }}</h2>
+
+<div class="row">
+  <div id="carousel-{{ $sectionTitle}}" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      {{ $portfolio := index $content.Site.Data ($sectionTitle | urlize)  }} 
+      {{ range $index, $value := $portfolio.items }} 
+        {{ $primaryUrl := where $value.urls "primary" true }}
+      <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
+        <div class="row">
+          <div class="col-md-5">
+          {{ partial "component/individual-image-direct" (dict "imagepath" $value.image "title" $value.title "url" $primaryUrl "tiny" 400 "small" 500 "medium" 600 "large" 800 "lazy" true) }}
+          </div>
+          <div class="col-md-7">
+            <h4>{{ $value.title }}</h4>
+            {{ $value.description | markdownify }}
+            <p>
+              {{ range $value.urls }}
+                <a class="btn bg-primary-color" href="{{ .link }}">Visit {{ .type }}</a>
+              {{ end }}
+            </p>
+          </div>
+        </div><!--.row-->
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="row my-5">
+  <div class="d-flex justify-content-center col-2">
+    <button type="button" class="btn btn-cv" data-bs-target="#carousel-{{ $sectionTitle}}" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+  </div>
+  <div class="d-flex justify-content-around col-8">
+    {{ range $index, $value := $portfolio.items }} 
+    <button type="button" class="btn btn-cv" data-bs-target="#carousel-{{ $sectionTitle}}" data-bs-slide-to="{{ $index }}" class="active" aria-current="true">{{ add $index 1 }}</button>
+    {{ end }}
+  </div>
+  <div class="d-flex justify-content-center col-2">
+    <button type="button" class="btn btn-cv" data-bs-target="#carousel-{{ $sectionTitle}}" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
