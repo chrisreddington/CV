@@ -44,3 +44,24 @@
 
 {{ $bootstrapJs := .Scratch.Get "bootstrapDeps" | resources.Concat "js/bootstrap.js" | resources.Minify | fingerprint }}
 <script src="{{ $bootstrapJs.Permalink }}"  cookie-consent="strictly-necessary" defer></script>
+
+<!-- Cookie Consent by https://www.PrivacyPolicies.com -->
+<script type="text/javascript" src="/js/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"{{ .Site.Title }}","website_privacy_policy_url":"https://www.christianreddington.co.uk/privacy"});
+});
+</script>
+
+<!-- Google Analytics -->
+<script type="text/plain" cookie-consent="tracking" async blah>
+</script>
+<!-- end of Google Analytics-->
+
+<!-- Microsoft Clarity -->
+<script type="text/plain" cookie-consent="tracking" async otherblah>
+</script>
+<!-- end of Unnamed script-->
+
+<noscript>Cookie Consent by <a href="https://www.privacypolicies.com/" rel="nofollow noopener">Privacy Policies website</a></noscript>
+<!-- End Cookie Consent -->

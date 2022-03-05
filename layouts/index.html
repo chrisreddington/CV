@@ -1,19 +1,93 @@
 {{ define "top" }}
-  <p>
-    Chris has been a software developer since an early age, initially focusing on web-based 
-    game development. He has continued to grow, more recently using his knowledge to 
-    help others learn through his Cloud with Chris platform. He is a recognised face in the 
-    technical community, regularly presenting at local meetup groups.
-  </p>
+<div class="bg-secondary-color">
+  <div class="container py-5">
+    <p class="lead text-monospace">
+      Chris has been a software developer since an early age, initially focusing on web-based 
+      game development. He has continued to grow, more recently using his knowledge to 
+      help others learn through his Cloud with Chris platform. He is a recognised face in the 
+      technical community, regularly presenting at local meetup groups.
+    </p>
 
-  <p>
-    Ambitious and self-motivated, he possesses excellent relationship building skills, 
-    having partnered with project managers, engineers, developers, heads of engineering
-    and more across hundreds of projects. He is passionate about inspiring and 
-    empowering the developer community, helping them to be successful.
-  </p>
+    <p class="lead text-monospace">
+      Ambitious and self-motivated, he possesses excellent relationship building skills, 
+      having partnered with project managers, engineers, developers, heads of engineering
+      and more across hundreds of projects. He is passionate about inspiring and 
+      empowering the developer community, helping them to be successful.
+    </p>
+  </div>
+</div>
 {{ end }}
 
 {{ define "main" }}
-{{- partialCached  "posts" . -}}
+
+<div class="bg-tertiary-color">
+  <div class="container py-5">
+    {{- partialCached  "timeline" . -}}
+  </div>
+</div><div class="bg-secondary-color">
+  <div class="container py-5">
+    {{- partialCached  "posts" . -}}
+  </div>
+</div>
+<div class="bg-tertiary-color">
+  <div class="container py-5">
+    {{ partial "certifications" . }}
+  </div>
+</div>
+<div class="bg-secondary-color py-5">
+  <div class="container">
+    <h2 class="display-3">Skills</h2>
+    <h3 class="my-3">Beginner</h3>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary-color-only" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <p class="mt-3 mb-5">
+      <span class="badge rounded-pill bg-primary">Coming Soon!</span>
+      <span class="badge rounded-pill bg-warning">Coming Soon!</span>
+      <span class="badge rounded-pill bg-danger">Coming Soon!</span>
+      <span class="badge rounded-pill bg-success">Coming Soon!</span>
+    </p>
+
+    <h3 class="my-3">Intermediate</h3>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary-color-only" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <p class="mt-3 mb-5">
+      <span class="badge rounded-pill bg-primary">Coming Soon!</span>
+      <span class="badge rounded-pill bg-warning">Coming Soon!</span>
+      <span class="badge rounded-pill bg-danger">Coming Soon!</span>
+      <span class="badge rounded-pill bg-success">Coming Soon!</span>
+    </p>
+    <h3 class="my-3">Proficient</h3>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary-color-only" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <p class="mt-3 mb-5">
+      <span class="badge rounded-pill bg-primary">Coming Soon!</span>
+      <span class="badge rounded-pill bg-warning">Coming Soon!</span>
+      <span class="badge rounded-pill bg-danger">Coming Soon!</span>
+      <span class="badge rounded-pill bg-success">Coming Soon!</span>
+    </p>
+
+    <h3 class="my-3">Expert</h3>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary-color-only" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <p class="mt-3 mb-5">
+      <span class="badge rounded-pill bg-primary">Coming Soon!</span>
+      <span class="badge rounded-pill bg-warning">Coming Soon!</span>
+      <span class="badge rounded-pill bg-danger">Coming Soon!</span>
+      <span class="badge rounded-pill bg-success">Coming Soon!</span>
+    </p>
+  </div>
+</div>
+<div class="bg-tertiary-color">
+  <div class="container">
+    {{- partialCached  "carousel" (dict "content" . "sectionTitle" "Portfolio") -}}
+  </div>
+</div>
 {{ end }}
