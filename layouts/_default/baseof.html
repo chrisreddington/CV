@@ -6,6 +6,7 @@
         <div class="col">
           {{ partial "component/image.html" (dict "content" . "url" "#" "image" .Site.Params.content.site.logo) }}
           <h1 class="text-center mt-3 display-1">{{ .Site.Title }}</h1>
+          {{ partial "socials" . }}
         </div>
       </div>
       <div class="bg-secondary-color">

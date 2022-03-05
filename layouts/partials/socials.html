@@ -1,0 +1,13 @@
+<div class="d-flex">
+  <ul class="list-inline mx-auto justify-content-center fs-3">
+    {{ $socials := .Site.Data.socials  }}
+    {{ $map := dict "linkedin" "fa-brands fa-linkedin-in" "github" "fa-brands fa-github" "meetup" "fa-brands fa-meetup" "twitch" "fa-brands fa-twitch" "twitter" "fa-brands fa-twitter" "youtube" "fa-brands fa-youtube" "link" "fa-solid fa-link"}}
+    {{ range $socials.items }}
+      <a href="{{ .href }}" target="_blank">
+        <li class="list-inline-item social-button">
+          <i class="{{ index $map .type }}"></i>
+        </li>
+      </a>
+    {{ end }}
+  </ul>
+</div>

@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "href": "https://linkedin.com/in/chrisreddington",
+      "text": "LinkedIn",
+      "type": "linkedin"
+    },
+    {
+      "href": "https://github.com/chrisreddington",
+      "text": "Personal GitHub Profile",
+      "type": "github"
+    },
+    {
+      "href": "https://github.com/CloudWithChris",
+      "text": "Cloud With Chris GitHub Organisation",
+      "type": "github"
+    },
+    {
+      "href": "https://meetup.com/Azure-Thames-Valley",
+      "text": "Azure Thames Valley Meetup Group",
+      "type": "meetup"
+    },
+    {
+      "href": "https://twitch.tv/CloudWithChris",
+      "text": "Cloud With Chris Twitch Channel",
+      "type": "twitch"
+    },
+    {
+      "href": "https://twitter.com/reddobowen",
+      "text": "Twitter",
+      "type": "twitter"
+    },
+    {
+      "href": "https://youtube.com/c/CloudWithChris",
+      "text": "Cloud With Chris YouTube Channel",
+      "type": "youtube"
+    },
+    {
+      "href": "https://www.cloudwithchris.com",
+      "text": "Cloud With Chris Website",
+      "type": "link"
+    }
+  ]
+}

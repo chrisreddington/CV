@@ -367,6 +367,18 @@ html, body {
   padding-top: 5px;
 }
 
+.social-button {
+  color: $primary-color;
+  line-height: 50px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  background-color: $white;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
 main a {
   color: #0C62A8;
   text-decoration: none;
