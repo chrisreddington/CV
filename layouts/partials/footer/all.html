@@ -46,7 +46,9 @@
 <script src="{{ $bootstrapJs.Permalink }}"  cookie-consent="strictly-necessary" defer></script>
 
 <!-- Cookie Consent by https://www.PrivacyPolicies.com -->
-<script type="text/javascript" src="/js/cookie-consent.js" charset="UTF-8"></script>
+{{ $consent := resources.Get "./js/cookie-consent.js" }}
+{{ $consentJs := slice $consent | resources.Concat "js/consent-bundle.js" | resources.Minify | fingerprint }}
+<script type="text/javascript" src="{{$consentJs.RelPermalink}}" charset="UTF-8"></script>
 <script type="text/javascript" charset="UTF-8">
 document.addEventListener('DOMContentLoaded', function () {
 cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"{{ .Site.Title }}","website_privacy_policy_url":"https://www.christianreddington.co.uk/privacy"});
@@ -54,13 +56,52 @@ cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express",
 </script>
 
 <!-- Google Analytics -->
-<script type="text/plain" cookie-consent="tracking" async blah>
-</script>
+
+{{- $pc := .Site.Config.Privacy.GoogleAnalytics -}}
+{{- if not $pc.Disable -}}
+  {{ with .Site.Params.features.analytics.googleAnalytics }}
+    <script type="text/plain" cookie-consent="tracking">
+    {{ template "__ga_js_set_doNotTrack" $ }}
+    if (!doNotTrack) {
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      {{- if $pc.UseSessionStorage }}
+      if (window.sessionStorage) {
+        var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+        ga('create', '{{ . }}', {
+          'storage': 'none',
+          'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+        });
+        ga(function(tracker) {
+          sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+        });
+      }
+      {{ else }}
+      ga('create', '{{ . }}', 'auto');
+      {{ end -}}
+      {{ if $pc.AnonymizeIP }}ga('set', 'anonymizeIp', true);{{ end }}
+      ga('send', 'pageview');
+    }
+    </script>
+    {{ $analytics := resources.Get "./js/analytics.js" }}
+    {{ $analyticsJs := slice $analytics | resources.Concat "js/analytics-bundle.js" | resources.Minify | fingerprint }}
+
+    <script type="text/plain" async src="{{ $analyticsJs.RelPermalink }}" cookie-consent="tracking" defer></script>
+  {{ end }}
+{{ end }}
 <!-- end of Google Analytics-->
 
 <!-- Microsoft Clarity -->
-<script type="text/plain" cookie-consent="tracking" async otherblah>
-</script>
+{{ if not .Site.IsServer }}
+  {{ with .Site.Params.features.analytics.microsoftClarity }}
+<script type="text/plain" cookie-consent="tracking">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "{{ . }}");
+  </script>
+  {{ end }}
+{{ end }}
 <!-- end of Unnamed script-->
 
 <noscript>Cookie Consent by <a href="https://www.privacypolicies.com/" rel="nofollow noopener">Privacy Policies website</a></noscript>
