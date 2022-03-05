@@ -7,6 +7,8 @@ name: Azure Static Web Apps CI/CD
 #    is just to the podcast_audio file, then it is ignored.
 
 on:
+  schedule:
+    - cron: 0 0 * * *
   push:
     branches:
       - main
