@@ -1,0 +1,211 @@
+{
+  "categories": [
+    {
+      "order": 1,
+      "title": "Beginner",
+      "percentage": 25
+    },
+    {
+      "order": 2,
+      "title": "Intermediate",
+      "percentage": 50
+    },
+    {
+      "order": 3,
+      "title": "Proficient",
+      "percentage": 75
+    },
+    {
+      "order": 4,
+      "title": "Expert",
+      "percentage": 100
+    }
+
+  ],
+  "types": [
+    {
+      "title": "azure",
+      "background": "bg-warning"
+    },
+    {
+      "title": "devops",
+      "background": "bg-success"
+    },
+    {
+      "title": "programming",
+      "background": "bg-danger"
+    }
+  ],
+  "items": [
+    {
+      "title": "Azure DevOps",
+      "category": "expert",
+      "type": "devops"
+    },
+    {
+      "title": "GitHub",
+      "category": "expert",
+      "type": "devops"
+    },
+    {
+      "title": "ARM Templates (JSON)",
+      "category": "expert",
+      "type": "devops"
+    },
+    {
+      "title": "ARM Templates (Bicep)",
+      "category": "expert",
+      "type": "devops"
+    },
+    {
+      "title": "Terraform",
+      "category": "expert",
+      "type": "devops"
+    },
+    {
+      "title": "Terraform Cloud",
+      "category": "proficient",
+      "type": "devops"
+    },
+    {
+      "title": "Jenkins",
+      "category": "intermediate",
+      "type": "devops"
+    },
+    {
+      "title": "Azure App Service",
+      "category": "expert",
+      "type": "azure"
+    },
+    {
+      "title": "Azure App Configuration",
+      "category": "proficient",
+      "type": "azure"
+    },
+    {
+      "title": "Azure CDN",
+      "category": "expert",
+      "type": "azure"
+    },
+    {
+      "title": "Azure Cognitive Search",
+      "category": "intermediate",
+      "type": "azure"
+    },
+    {
+      "title": "Azure Container Registry",
+      "category": "expert",
+      "type": "azure"
+    },
+    {
+      "title": "Azure Functions",
+      "category": "proficient",
+      "type": "azure"
+    },
+    {
+      "title": "Azure Lab Services",
+      "category": "expert",
+      "type": "azure"
+    },
+    {
+      "title": "Azure KeyVault",
+      "category": "proficient",
+      "type": "azure"
+    },
+    {
+      "title": "Azure Kubernetes Service",
+      "category": "expert",
+      "type": "azure"
+    },
+    {
+      "title": "Azure Storage",
+      "category": "proficient",
+      "type": "azure"
+    },
+    {
+      "title": "Azure CosmosDB",
+      "category": "intermediate",
+      "type": "azure"
+    },
+    {
+      "title": "Azure Logic Apps",
+      "category": "proficient",
+      "type": "azure"
+    },
+    {
+      "title": "C",
+      "category": "beginner",
+      "type": "programming"
+    },
+    {
+      "title": "Cold Fusion",
+      "category": "beginner",
+      "type": "programming"
+    },
+    {
+      "title": "Objective G",
+      "category": "beginner",
+      "type": "programming"
+    },
+    {
+      "title": "Go",
+      "category": "beginner",
+      "type": "programming"
+    },
+    {
+      "title": "Python",
+      "category": "beginner",
+      "type": "programming"
+    },
+    {
+      "title": "Java",
+      "category": "intermediate",
+      "type": "programming"
+    },
+    {
+      "title": "Ruby on Rails",
+      "category": "proficient",
+      "type": "programming"
+    },
+    {
+      "title": "JavaScript",
+      "category": "proficient",
+      "type": "programming"
+    },
+    {
+      "title": "MySQL",
+      "category": "proficient",
+      "type": "programming"
+    },
+    {
+      "title": "PowerShell",
+      "category": "proficient",
+      "type": "programming"
+    },
+    {
+      "title": "R",
+      "category": "intermediate",
+      "type": "programming"
+    },
+    {
+      "title": "CSS",
+      "category": "expert",
+      "type": "programming"
+    },
+    {
+      "title": "HTML",
+      "category": "expert",
+      "type": "programming"
+    },
+    {
+      "title": "PHP",
+      "category": "expert",
+      "type": "programming"
+    },
+    {
+      "title": "C#",
+      "category": "expert",
+      "type": "programming"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <h2 class="display-3">Skills</h2>
+
+  <p>
+    {{ range $index, $value := .Site.Data.skills.types }}
+      <span class="badge badge-pill badge-primary {{ $value.background }}">{{ $value.title | humanize }}</span>
+    {{ end }}
+  </p>
+
+
+  {{ $skills := .Site.Data.skills  }}
+  {{ range $index, $value := $skills.categories }}
+    <h3 class="my-3">{{ $value.title }}</h3>
+
+    {{ with $value.percentage }}
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary-color-only" role="progressbar" style="width: {{ . }}%" aria-valuenow="{{ . }}" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    {{ end }}
+
+    {{ $title := $value.title }}
+
+    <p class="mt-3 mb-5">
+      {{ range $index, $value := (sort (where $skills.items "category" ($title | lower)) "title" "asc") }}
+        <span class="badge rounded-pill {{ partial "component/skillslabel" (dict "content" $value "types" $skills.types) }}">{{ $value.title }}</span>
+      {{ end }}
+    </p>
+  {{ end }}
+</div>

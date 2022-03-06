@@ -1,0 +1,4 @@
+{{- $types := .types -}}
+{{- $content := .content -}}
+{{- $label := where $types "title" $content.type -}}
+{{- (index $label 0).background -}}
