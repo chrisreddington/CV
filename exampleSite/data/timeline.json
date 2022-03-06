@@ -1,0 +1,189 @@
+{
+  "items": [
+    {
+      "title": "Cloud Solution Architect (CSA) at Microsoft",
+      "time": "Mar 2021 - Present",
+      "type": "career",
+      "details": [
+        {
+          "title": "",
+          "text": "App Dev CSA in Microsoft UK's Customer Success Unit (CSU); DevOps Squad Lead.",
+          "tags": [
+            
+          ]
+        },
+        {
+          "title": "DEVELOPER ENGAGEMENT & CONTENT CREATION",
+          "text": "A recognised expert within the team, the subsidiary and beyond. Working closely with the UK Developer Audience team and Corp on scaling developer engagement programmes within Customer Accounts. Pioneering a new video series on Microsoft  Learn TV, based on real-world learnings in the CSU. Presented at Microsoft //Build.",
+          "tags": [
+            
+          ]
+        },
+        {
+          "title": "COMMUNITY LEADER",
+          "text": "Organiser of Azure Thames Valley. Have become a recognised meetup speaker, invited to several events (as seen at [https://www.cloudwithchris.com/talk](https://www.cloudwithchris.com/talk)). Received overwhelmingly positive feedback as a coach on multiple customer-facing Hackathons",
+          "tags": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Sr. FastTrack for Azure Engineer at Microsoft",
+      "time": "Mar 2017 - Feb 2021",
+      "type": "career",
+      "details": [
+        {
+          "text": "Microsoft Azure Engineering's team for Customer Experience at scale",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "CLOUD ADVOCATE",
+          "text": "Created numerous Azure Docs and Azure Architecture Center articles; Committed several Pull Requests for Azure GitHub Actions; Led customers through architectural sessions at several Microsoft conferences; initiated a video series 'Azure Mythbusters' alongside Microsoft UK; Delivered Kubernetes upskilling sessions across the globe",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "DEVOPS PRACTICE LEAD",
+          "text": "Responsible for setting DevOps strategy to drive additional customer adoption. Led several cross-organisation initiatives, partnering with GitHub FastTrack, GitHub Actions, Azure DevOps, and other Azure Engineering teams to drive improvements in their products and developer focused tooling.",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "PROGRAM & REGION LAUNCH & EVANGELISM",
+          "text": "Launched the FastTrack for Azure Program alongside the leadership team, speaking at global launch events in Australia, the UK and Western Europe. Presented at Microsoft Inspire, engaging with Microsoft partners in interactive breakout sessions.",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "COACH AND MENTOR",
+          "text": "Mentored colleagues globally from various career stages and technical backgrounds on GitHub, Cloud Architecture, Azure DevOps and DevOps principals",
+          "tags": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Application Development Manager at Microsoft",
+      "type": "career",
+      "time": "Jul 2015 - Mar 2017",
+      "details": [
+        {
+          "title": "TECHNICAL DELIVERY",
+          "text": "Supported customers their development approach; focusing on agile processes DevOps and effective use of tooling. Received 100% 'Very Satisfied' responses across entire customer portfolio, compared to a target of 87% and team average of 86%"
+        },
+        {
+          "title": "DRIVING OPPORTUNITY PIPELINE",
+          "text": "Led pre-sales across Microsoft's Small and Mid-Size segment of Microsoft UK Services. Drove awareness of the Premier Support for Developers offering, developed leads, scoped opportunities and drove customer proposals into deals.",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "PROGRAM MANAGEMENT, AZURE SOLUTION ASSESSMENTS",
+          "text": "Developed an assessment framework into a global offering. When Chris left the role, 15 customers had been through the pilot, resulting in 300 recommendations; 46 of which were critical. This safeguarded more than $8.9m of cloud revenue.",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "MENTORING AND COACHING",
+          "text": "Supported Interns, and industry hires on personal and career development.",
+          "tags": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Technical Account Manager at Microsoft",
+      "type": "career",
+      "time": "Mar 2015 - Jul 2015",
+      "details": [
+        {
+          "title": "ACCOUNT MANAGEMENT",
+          "text": "Accountable for a portfolio of accounts valued over £2.5m. Partnered with customers to understand their business and help them realise the value of Microsoft Technology.",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "CUSTOMER VALUE REPORTING",
+          "text": "Rolled out a reporting process on technical deliveries across the team. Received positive feedback from key customer stakeholders, leading to strategic relationships.",
+          "tags": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Associate Devices & Mobility Consultant at Microsoft",
+      "type": "career",
+      "time": "Sep 2014 - Mar 2015",
+      "details": [
+        {
+          "title": "TECHNICAL DELIVERY",
+          "text": "Part of a project team delivering Windows 8.1 devices and supporting infrastructure. Contributed to the project's requirements gathering and design stages.",
+          "tags": [
+
+          ]
+        },
+        {
+          "title": "PROGRAM MANAGEMENT, GRADUATE TECHNICAL TRAINING",
+          "text": "Program managed and presented a series of technical sessions to grow the graduate community. Management requested a similar program for the wider organisation.",
+          "tags": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "BSc Computer Science with Intercalated Year, University of Warwick",
+      "type": "education",
+      "time": "2010 - 2014",
+      "details": [
+        {
+          "title": "First Class with Honours",
+          "text": "Highlights: Third Year Project (Visualisation of Trends in Location Based Data) 93%, Machine Learning 81%, Software Engineering Principles 71%, Artificial Intelligence 72%",
+          "tags": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Saint David's College (A-Levels)",
+      "type": "education",
+      "time": "2008 - 2010",
+      "details": [
+        {
+          "title": "",
+          "text": "Computing (A*), Maths (A), Statistics (A), Further Maths (C), AS Physics (C), Extended Project (B), Welsh Baccalaureate Advanced Diploma",
+          "tags": [
+
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Corpus Christi High School (GCSEs)",
+      "time": "2003 - 2008",
+      "type": "education",
+      "details": [
+        {
+          "title": "",
+          "text": "10 A* - B (Including Maths, IT, Science and Additional Science)",
+          "tags": [
+
+          ]
+        }
+      ]
+    }
+  ]
+}

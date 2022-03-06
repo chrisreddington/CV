@@ -73,7 +73,7 @@ params:
     # Settings related to analytics
     analytics:
       googleAnalytics: "UA-80259576-1"       # Google Analytics ID
-      microsoftClarity: ""
+      microsoftClarity: "aw9mx51l8i"
   security:
     # If all CSP properties are empty strings, then
     # the CSP section will not be rendered. If at least 1
