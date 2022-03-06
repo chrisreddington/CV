@@ -3,13 +3,13 @@
 <ul class="timeline">
   {{ $timeline := .Site.Data.timeline  }}
   {{ range $index, $value := $timeline.items }}
-    <li{{ if and (ne $index 0) (eq (mod $index 2) 1) }} class="timeline-inverted"{{ end }}>
+    <li id="timeline-{{ $index }}" {{ if and (ne $index 0) (eq (mod $index 2) 1) }} class="timeline-inverted"{{ end }}>
       <div class="timeline-badge primary">
-        <a>
+        <a href="#timeline-{{ $index }}">
           {{ if eq .type "education" }}
-            <i class="fa-solid fa-graduation-cap"></i>
+            <span class="fa-solid fa-graduation-cap" title="{{ .title }}"></span>
           {{ else }}
-            <i class="fa-solid fa-briefcase"></i>
+            <span class="fa-solid fa-briefcase" title="{{ .title }}"></span>
           {{ end }}
         </a>
       </div>

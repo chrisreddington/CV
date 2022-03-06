@@ -352,11 +352,11 @@ Footer
 .bg-footer {
   border-top: $secondary-color solid 5px;
   background-color: $primary-color;
-  color: rgba(255, 255, 255, 0.8);
+  color: $white;
 }
 
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
-  color: #ffffff;
+  color: $white;
 }
 .nav-list li {
   padding-top: 5px;
@@ -383,7 +383,7 @@ ul, ol {
   padding: 23px;
   font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: $white;
 }
 
 .nav-list li a:before {
@@ -397,4 +397,15 @@ ul, ol {
   opacity: 0;
   visibility: hidden;
   transition: .22s ease;
+}
+
+/*
+--------------------------------------------------
+Labels
+--------------------------------------------------
+*/
+
+.bg-custom {
+  background-color: $primary-color;
+  color: $white;
 }

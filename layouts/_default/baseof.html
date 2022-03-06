@@ -4,7 +4,7 @@
   <body>
       <div class="row bg-primary-color py-5">
         <div class="col">
-          {{ partial "component/image.html" (dict "content" . "url" "#" "image" .Site.Params.content.site.logo) }}
+          {{ partial "component/image" (dict "imagepath" .Site.Params.content.site.logo "content" (dict "title" .Site.Title) "url" .Site.BaseURL "tiny" 50 "small" 100 "medium" 150 "large" 200 "lazy" false "rounded" true) }}
           <h1 class="text-center mt-3 display-1">{{ .Site.Title }}</h1>
           {{ partial "socials" . }}
         </div>

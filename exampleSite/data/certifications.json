@@ -1,123 +1,123 @@
 {
   "items": [
     {
-      "image": "images/azure-administrator-associate-600x600.png",
-      "name": "Azure Administrator Associate",
+      "image": "images/certifications/azure-administrator-associate-600x600.png",
+      "title": "Azure Administrator Associate",
       "url": "https://www.credly.com/badges/6ba8c13c-3792-41ee-bd77-9940d137a08f"
     },
     {
-      "image": "images/azure-ai-engineer-600x600.png",
-      "name": "Azure AI Engineer Associate",
+      "image": "images/certifications/azure-ai-engineer-600x600.png",
+      "title": "Azure AI Engineer Associate",
       "url": "https://www.credly.com/badges/d05b9893-0b4f-47f4-a934-bffe1d73d09e"
     },
     {
-      "name": "Azure Data Engineer Associate",
-      "image": "images/azure-data-engineer-associate-600x600.png",
+      "title": "Azure Data Engineer Associate",
+      "image": "images/certifications/azure-data-engineer-associate-600x600.png",
       "url": "https://www.credly.com/badges/d8c32580-400e-4635-a384-5973f40b548a"
     },
     {
-      "name": "Azure Data Scientist Associate",
-      "image": "images/azure-data-scientist-associate-600x600.png",
+      "title": "Azure Data Scientist Associate",
+      "image": "images/certifications/azure-data-scientist-associate-600x600.png",
       "url": "https://www.credly.com/badges/b8bead77-4f11-47b1-ba5d-4ba0b9f5f168"
     },
     {
-      "name": "Azure Developer Associate",
-      "image": "images/azure-developer-associate-600x600.png",
+      "title": "Azure Developer Associate",
+      "image": "images/certifications/azure-developer-associate-600x600.png",
       "url": "https://www.credly.com/badges/d909504d-dc23-490e-aa4f-e77cb5614921"
     },
     {
-      "name": "Azure Security Engineer Associate",
-      "image": "images/azure-security-engineer-associate600x600.png",
+      "title": "Azure Security Engineer Associate",
+      "image": "images/certifications/azure-security-engineer-associate600x600.png",
       "url": "https://www.credly.com/badges/c4657b73-4110-486f-aa07-6a2c59becb6a"
     },
     {
-      "name": "Azure Solutions Architect Expert",
-      "image": "images/azure-solutions-architect-expert-600x600.png",
+      "title": "Azure Solutions Architect Expert",
+      "image": "images/certifications/azure-solutions-architect-expert-600x600.png",
       "url": "https://www.credly.com/badges/1e89bd14-8d4f-4353-926a-d08bf61d08d3"
     },
     {
-      "name": "DevOps Engineer Expert",
-      "image": "images/CERT-Expert-DevOps-Engineer-600x600.png",
+      "title": "DevOps Engineer Expert",
+      "image": "images/certifications/CERT-Expert-DevOps-Engineer-600x600.png",
       "url": "https://www.credly.com/badges/6677369d-a3b4-4442-9c2e-e21b9c9e717f"
     },
     {
-      "name": "Power Platform Fundamentals",
-      "image": "images/CERT-Fundamentals-Power-Platform.png",
+      "title": "Power Platform Fundamentals",
+      "image": "images/certifications/CERT-Fundamentals-Power-Platform.png",
       "url": "https://www.credly.com/badges/a917a666-7eac-4f18-8060-e7201c0d2b72"
     },
     {
-      "name": "Certified Kubernetes Administrator",
-      "image": "images/cka_from_cncfsite__281_29.png",
+      "title": "Certified Kubernetes Administrator",
+      "image": "images/certifications/cka_from_cncfsite__281_29.png",
       "url": "https://www.credly.com/badges/9886d074-dc26-4bcc-ae83-eb8297e7f4b2"
     },
     {
-      "name": "Certified Kubernetes Application Developer",
-      "image": "images/ckad_from_cncfsite.png",
+      "title": "Certified Kubernetes Application Developer",
+      "image": "images/certifications/ckad_from_cncfsite.png",
       "url": "https://www.credly.com/badges/9886d074-dc26-4bcc-ae83-eb8297e7f4b2"
     },
     {
-      "name": "Microsoft Containers OpenHack Coach",
-      "image": "images/Containers_Coach.png",
+      "title": "Microsoft Containers OpenHack Coach",
+      "image": "images/certifications/Containers_Coach.png",
       "url": "https://www.credly.com/badges/9dfe6f6d-1bba-4c11-ae51-33eb40d31960"
     },
     {
-      "name": "Microsoft DevOps OpenHack Coach",
-      "image": "images/DevOps_Coach.png",
+      "title": "Microsoft DevOps OpenHack Coach",
+      "image": "images/certifications/DevOps_Coach.png",
       "url": "https://www.credly.com/badges/8df9c365-3580-46f9-b0a0-28552153c74f"
     },
     {
-      "name": "Microsoft Serverless OpenHack",
-      "image": "images/Serverless.png",
+      "title": "Microsoft Serverless OpenHack",
+      "image": "images/certifications/Serverless.png",
       "url": "https://www.credly.com/badges/8647b646-3f10-417b-9835-111f142952b6"
     },
     {
-      "name": "Microsoft Event Speaker Gold FY18",
-      "image": "images/Event-Speaker-Gold-FY18.png",
+      "title": "Microsoft Event Speaker Gold FY18",
+      "image": "images/certifications/Event-Speaker-Gold-FY18.png",
       "url": "https://www.credly.com/badges/35196ff6-a30c-4e29-8311-50ea780c1598"
     },
     {
-      "name": "Microsoft Event Speaker Gold FY21",
-      "image": "images/Event-Speaker-Gold.png",
+      "title": "Microsoft Event Speaker Gold FY21",
+      "image": "images/certifications/Event-Speaker-Gold.png",
       "url": "https://www.credly.com/earner/earned/badge/ed8fdb5c-bbd6-4191-ad65-cde84100c286"
     },
     {
-      "name": "Microsoft External User Group Gold FY21",
-      "image": "images/External-User-Group-Gold.png",
+      "title": "Microsoft External User Group Gold FY21",
+      "image": "images/certifications/External-User-Group-Gold.png",
       "url": "https://www.credly.com/badges/af4987fe-c339-4eb4-99be-ea0d3c69fa2b"
     },
     {
-      "name": "Hashicorp Certified: Terraform Associate",
-      "image": "images/hashicorp-terraform-associate.png",
+      "title": "Hashicorp Certified: Terraform Associate",
+      "image": "images/certifications/hashicorp-terraform-associate.png",
       "url": "https://www.credly.com/badges/2ef186ac-578d-4eb4-a4d4-36159e8d7266"
     },
     {
-      "name": "Microsoft Certified Trainer 2019 - 2020",
-      "image": "images/Microsoft-Certified-Trainer-2019-2020.png",
+      "title": "Microsoft Certified Trainer 2019 - 2020",
+      "image": "images/certifications/Microsoft-Certified-Trainer-2019-2020.png",
       "url": "https://www.credly.com/badges/14c94b01-4e20-4159-b978-9eb89e0bf7fb"
     },
     {
-      "name": "Microsoft Certified Trainer 2020 - 2021",
-      "image": "images/MCT-Microsoft_Certified_Trainer-2021.png",
+      "title": "Microsoft Certified Trainer 2020 - 2021",
+      "image": "images/certifications/MCT-Microsoft_Certified_Trainer-2021.png",
       "url": "https://www.credly.com/badges/de9ca394-932f-40a4-b8f3-7ea51914f166"
     },
     {
-      "name": "Microsoft Certified Trainer 2021 - 2022",
-      "image": "images/MCT-Microsoft_Certified_Trainer-2122-600x600.png",
+      "title": "Microsoft Certified Trainer 2021 - 2022",
+      "image": "images/certifications/MCT-Microsoft_Certified_Trainer-2122-600x600.png",
       "url": "https://www.credly.com/badges/7532efad-9142-45be-931a-9521097ae02e"
     },
     {
-      "name": "Power Platform App Maker Associate",
-      "image": "images/power-platform-app-maker-600x600.png",
+      "title": "Power Platform App Maker Associate",
+      "image": "images/certifications/power-platform-app-maker-600x600.png",
       "url": "https://www.credly.com/badges/fbf5f8fd-ef98-4f92-8892-dbd181196823"
     },
     {
-      "name": "Power Platform Developer Associate",
-      "image": "images/power-platform-developer-600x600.png",
+      "title": "Power Platform Developer Associate",
+      "image": "images/certifications/power-platform-developer-600x600.png",
       "url": "https://www.credly.com/badges/c07d93f8-fa8a-4d6a-900e-40635499b8ac"
     },
     {
-      "name": "Azure IoT Developer Specialty",
-      "image": "images/specialty-azure-iot-developer-600x600.png",
+      "title": "Azure IoT Developer Specialty",
+      "image": "images/certifications/specialty-azure-iot-developer-600x600.png",
       "url": "https://www.credly.com/badges/c1b50568-eea1-48ce-a498-49c12b6dbe30"
     }
   ]

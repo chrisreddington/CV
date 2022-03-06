@@ -1,7 +1,42 @@
-{{ $image := .image }}
-{{ $url := .url }}
-{{ with .Params.Banner }}   
-  {{ partial "component/banner-image.html"   . }}
+{{ $content := .content }}
+{{ $imagePath := .imagepath }}
+
+{{ $image := "" }}
+
+{{ if $imagePath }}
+  {{ $image = resources.Get $imagePath }}
 {{ else }}
-  {{ partial "component/circular-image.html" (dict "content" . "image" $image "url" $url) }}
+  {{ $image = resources.Get $content.image }}
 {{ end }}
+
+{{ $rounded := .rounded | default false }}
+
+{{ $tiny := .tiny }}
+{{ $small := .small }}
+{{ $medium := .medium }}
+{{ $large := .large }}
+{{ $lazy := .lazy }}
+
+{{ $tinyImage := ($image.Resize (printf "%sx webp" (string $tiny) )) }}
+{{ $smallImage := ($image.Resize (printf "%sx webp" (string $small) )) }}
+{{ $mediumImage := ($image.Resize (printf "%sx webp" (string $medium) )) }}
+{{ $largeImage := ($image.Resize (printf "%sx webp" (string $large) )) }}
+
+<a href="{{ $content.url | relURL }}">
+  <img class="img-fluid  mx-auto d-block {{ if $rounded }}rounded-circle{{ end }}"
+        {{ if eq $lazy true }}loading="lazy"{{ end }}
+        srcset="
+            {{- with $tinyImage.RelPermalink -}}{{.}} {{ $tiny }}w{{- end -}}
+            {{- with $smallImage.RelPermalink -}}, {{.}} {{ $small }}w{{- end -}}
+            {{- with $mediumImage.RelPermalink -}}, {{.}} {{ $medium }}w{{- end -}}
+            {{- with $largeImage.RelPermalink -}}, {{.}} {{ $large }}w{{- end -}}" 
+        src="{{ $image.RelPermalink }}" 
+        sizes="(max-width: 600px) {{$tiny}}px,
+               (max-width: 800px) {{$small}}px,
+               (max-width: 1050px) {{$medium}}px,
+               {{$large}}px"
+        alt="{{ $content.title }}"
+        width="{{ $largeImage.Width }}"
+        height="{{ $largeImage.Height }}"
+        title="{{ $content.title }}" />
+</a>

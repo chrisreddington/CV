@@ -18,7 +18,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>{{ $title }}</title>
-  <link rel="manifest" href="/manifest.json">
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <!-- title metadata -->
   <meta property="og:title" content="{{ $title }}" />
@@ -50,11 +49,6 @@
   <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
   <!-- sitemap -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "sitemap.xml" | absURL}}" /> 
-  <!-- different output formats-->
-  {{ with .OutputFormats.Get "RSS" }}
-    <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $title }}" />
-    <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
-  {{ end }}
 
   <meta property="og:type" content="website" /> 
   <meta name="robots" content="index,follow" /> 
@@ -66,13 +60,36 @@
   <!-- Theme Color -->
   <meta name="theme-color" content="#29aae1" /> 
   <meta name="msapplication-TileColor" content="#29aae1" />
-  
-  {{ if .Params.Tags }}  
-    <meta name="keywords" content="{{ print (delimit .Params.Tags ", ") ", " (delimit .Site.Params.content.site.Keywords ", ") }}" />
-  {{ else }}
-    <meta name="keywords" content="{{ print (delimit .Site.Params.content.site.Keywords ", ") }}" />
+
+  {{ $keywords := newScratch }}
+  {{ $keywords.Set "keywords" slice }}
+
+  {{ with .Site.Data.skills.items  }}
+    {{ range $index, $value := . }}
+      {{ $keywords.Add "keywords" $value.title }}
+    {{ end }}
   {{ end }}
-  
+
+  {{ with .Site.Data.certifications.items  }}
+    {{ range $index, $value := . }}
+      {{ $keywords.Add "keywords" $value.title }}
+    {{ end }}
+  {{ end }}
+
+  {{ with .Site.Data.timeline.items  }}
+    {{ range $index, $value := . }}
+      {{ $keywords.Add "keywords" $value.title }}
+    {{ end }}
+  {{ end }}
+
+  {{ with .Site.Params.content.site.Keywords  }}
+    {{ range $index, $value := . }}
+      {{ $keywords.Add "keywords" $value }}
+    {{ end }}
+  {{ end }}
+
+  <meta name="keywords" content="{{ print (delimit ($keywords.Get "keywords") ", ") }}" />
+
   <meta name="imagemode" content="force" />
   <meta name="coverage" content="Worldwide" /> 
   <meta name="distribution" content="Global" />
@@ -82,14 +99,6 @@
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-touch-fullscreen" content="yes" />
-
-  <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/favicon-96.png" sizes="96x96">
-  
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon-152.png">
-  <link rel="apple-touch-icon-precomposed" sizes="167x167" href="/favicon-167.png">
-  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/favicon-180.png">
 
   <!-- Bootstrap CSS -->
   {{ $style := resources.Get "sass/main.scss" | toCSS | minify }}
@@ -121,3 +130,65 @@
         {{ (printf "<meta http-equiv=\"Content-Security-Policy\" content=\"%s\">" ($scratch.Get "csp" )| safeHTML) }}
       {{ end }}
   {{ end }}
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": {{- .Site.Home.Permalink -}},
+      "logo": {{ partial "metadata/image-ld.html" . }}
+    }
+  </script>
+  
+  <script defer type="application/ld+json">
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": {{ .Site.Home.Permalink }}, 
+      "sameAs": [
+        {{ printf "%s%s" "https://twitter.com/" .Site.Params.content.social.twitter | absURL }}, 
+        {{ printf "%s%s" "https://github.com/" .Site.Params.content.social.github | absURL }}
+      ], 
+      "name": {{ .Title }}, 
+      "logo": {{ "/favicon.ico" | absURL }}
+    }
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "{{ .Site.Title }}",
+        "item": {{ .Site.BaseURL }}
+      }
+      {{ if and (or .IsNode .IsPage) (not .IsHome)}}
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "name": 
+          {{- if or (and .Parent .Parent.IsHome) .IsNode -}}
+            {{- .Title -}}
+          {{- else -}}
+            {{- .Parent.Title -}}
+          {{ end }},
+        {{ if and (not (and .Parent .Parent.IsHome)) .IsPage }}
+          "item": {{ .Parent.Permalink }}
+        {{ end }}
+      }
+      {{ end }}
+      {{ if .Parent }}
+        {{ if and (not .Parent.IsHome) .IsPage }}
+        ,{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "{{ .Title }}"
+        }
+        {{ end }}
+      {{ end }}
+      ]
+    }
+  </script>

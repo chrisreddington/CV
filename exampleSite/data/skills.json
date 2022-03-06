@@ -25,7 +25,7 @@
   "types": [
     {
       "title": "azure",
-      "background": "bg-warning"
+      "background": "bg-custom"
     },
     {
       "title": "devops",

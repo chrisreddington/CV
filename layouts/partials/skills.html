@@ -14,7 +14,7 @@
 
     {{ with $value.percentage }}
       <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary-color-only" role="progressbar" style="width: {{ . }}%" aria-valuenow="{{ . }}" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary-color-only" role="progressbar" style="width: {{ . }}%" aria-valuenow="{{ . }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $value.title }}"></div>
       </div>
     {{ end }}
 

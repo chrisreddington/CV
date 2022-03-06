@@ -5,8 +5,6 @@
     "js/dom/manipulator.js",
     "js/dom/selector-engine.js",
     "js/base-component.js",
-    "js/carousel.js",
-    "js/collapse.js",
-    "js/dropdown.js"
+    "js/carousel.js"
   ]
 }

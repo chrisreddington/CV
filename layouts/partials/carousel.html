@@ -11,10 +11,10 @@
       <div class="carousel-item {{ if eq $index 0 }}active{{ end }}">
         <div class="row">
           <div class="col-md-5">
-          {{ partial "component/individual-image-direct" (dict "imagepath" $value.image "title" $value.title "url" $primaryUrl "tiny" 400 "small" 500 "medium" 600 "large" 800 "lazy" true) }}
+          {{ partial "component/image" (dict "imagepath" $value.image "content" (dict "title" $value.title) "url" $primaryUrl "tiny" 400 "small" 500 "medium" 600 "large" 800 "lazy" true) }}
           </div>
           <div class="col-md-7">
-            <h4>{{ $value.title }}</h4>
+            <h3>{{ $value.title }}</h3>
             {{ $value.description | markdownify }}
             <p>
               {{ range $value.urls }}
