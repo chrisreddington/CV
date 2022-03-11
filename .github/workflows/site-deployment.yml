@@ -61,7 +61,6 @@ jobs:
       run:
         shell: bash
         working-directory: exampleSite
-    if: github.event_name == 'push' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.action != 'closed')
     runs-on: ubuntu-latest
     steps:            
     - uses: actions/checkout@v2
