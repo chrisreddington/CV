@@ -57,6 +57,10 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
   # A set of steps used to render the website from the markdown, theme and assets into the HTML, CSS, JS and images that are delivered to a user.
   build:
+    defaults:
+      run:
+        shell: bash
+        working-directory: exampleSite
     if: github.event_name == 'push' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.action != 'closed')
     runs-on: ubuntu-latest
     steps:            
@@ -78,7 +82,6 @@ jobs:
       if: github.ref != 'refs/heads/main'
     - name: 'Zip the artifact'
       run: |
-        cd "${{ github.workspace }}"
         zip -r website.zip public
     - name: 'Upload Generated Static Content as Website Artifact'
       uses: actions/upload-artifact@v3.0.0
