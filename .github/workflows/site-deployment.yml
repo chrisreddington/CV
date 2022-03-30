@@ -36,7 +36,7 @@ on:
 
 # Environment variables used for consistency across the workflow.
 env:
-  HUGO_VERSION: '0.94.0'
+  HUGO_VERSION: '0.96.0'
   SWA_NAME: 'chris-cv'
   AZURE_CLI_VERSION: '2.34.1'
 
@@ -63,9 +63,9 @@ jobs:
         working-directory: exampleSite
     runs-on: ubuntu-latest
     steps:            
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
-        submodules: 'true'
+        submodules: 'recursive'
     - name: 'Install Node Dependencies'
       run: npm ci    
     - name: 'Setup Hugo on Runner'
