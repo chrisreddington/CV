@@ -107,7 +107,7 @@ jobs:
       githubtoken: ${{ secrets.GITHUB_TOKEN }}
   deploy_prod:  
     if: github.event_name == 'push' || github.event_name == 'schedule'
-    needs: [compressor, build]
+    needs: [build]
     permissions:
       id-token: write
       contents: read
